@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'detail_page.dart'; // Karena sudah satu folder di study_kasus, panggil langsung nama filenya
+import 'detail_page.dart'; 
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,11 +12,19 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: Padding(
+        body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const Icon(Icons.school, size: 80, color: Colors.blue),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                'assets/images/foto_sekolah.png', 
+                height: 150,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
             const SizedBox(height: 16),
             const Text('Selamat Datang!', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             const Text('Jelajahi area SMK PGRI 1 Giri Banyuwangi.', style: TextStyle(color: Colors.grey)),
@@ -44,8 +52,8 @@ class HomePage extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                leading: const Icon(Icons.build, color: Colors.blue),
-                title: const Text('Bengkel Praktik', style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: const Icon(Icons.business, color: Colors.blue),
+                title: const Text('Laboratorium Perhotelan', style: TextStyle(fontWeight: FontWeight.bold)),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {},
               ),

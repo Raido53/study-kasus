@@ -20,7 +20,7 @@ class RoutePage extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
-                'assets/images/denah_sekolah.png', // Pastikan gambar tersedia
+                'assets/images/denah_sekolah.jpg', // Pastikan gambar tersedia
                 height: 180,
                 fit: BoxFit.contain,
               ),
